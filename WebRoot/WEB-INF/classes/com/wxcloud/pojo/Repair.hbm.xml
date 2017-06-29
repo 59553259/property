@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">  
+<hibernate-mapping>  
+	<class name="com.wxcloud.pojo.Repair" table="repairmgt">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="increment" />
+		</id>
+		<property name="RepairReason" type="java.lang.String">
+			<column name="RepairReason" length="128"></column>
+		</property>
+		<property name="RepairCondition" type="java.lang.String">
+			<column name="RepairCondition" length="32"></column>
+		</property>
+		<property name="RepairPerson" type="java.lang.String">
+			<column name="RepairPerson" length="32"></column>
+		</property>
+		<property name="RepairType" type="java.lang.String">
+			<column name="RepairType" length="32"></column>
+		</property>
+		<property name="RepairTime" type="java.lang.String">
+			<column name="RepairTime" length="64" />
+		</property>
+	</class>
+</hibernate-mapping>

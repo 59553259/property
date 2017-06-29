@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">  
+<hibernate-mapping>  
+	<class name="com.wxcloud.pojo.Cost" table="costmgt">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="increment" />
+		</id>
+		<property name="User" type="java.lang.String">
+			<column name="User" length="32"></column>
+		</property>
+		<property name="Project" type="java.lang.String">
+			<column name="Project" length="128"></column>
+		</property>
+		<property name="Receivable" type="java.lang.String">
+			<column name="Receivable" length="32"></column>
+		</property>
+		<property name="Actual" type="java.lang.String">
+			<column name="Actual" length="32"></column>
+		</property>
+		<property name="Time" type="java.lang.String">
+			<column name="Time" length="64" />
+		</property>
+		<property name="State" type="java.lang.String">
+			<column name="State" length="32" />
+		</property>
+	</class>
+</hibernate-mapping>

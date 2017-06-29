@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">  
+<hibernate-mapping>  
+	<class name="com.wxcloud.pojo.House" table="housemgt">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="increment" />
+		</id>
+		<property name="HouseNumber" type="java.lang.Integer">
+			<column name="HouseNumber" length="32"></column>
+		</property>
+		<property name="Residential" type="java.lang.String">
+			<column name="Residential" length="128"></column>
+		</property>
+		<property name="Building" type="java.lang.String">
+			<column name="Building" length="128"></column>
+		</property>
+		<property name="Unit" type="java.lang.String">
+			<column name="Unit" length="32"></column>
+		</property>
+		<property name="Park" type="java.lang.String">
+			<column name="Park" length="32"></column>
+		</property>
+		<property name="Location" type="java.lang.String">
+			<column name="Location" length="128"></column>
+		</property>
+		<property name="Facilities" type="java.lang.String">
+			<column name="Facilities" length="128"></column>
+		</property>
+		<property name="HouseType" type="java.lang.String">
+			<column name="HouseType" length="32"></column>
+		</property>
+	</class>
+</hibernate-mapping>

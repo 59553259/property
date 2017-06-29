@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC  
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"  
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+    
+<struts>
+	<package name="com.wxcloud.action" extends="struts-default">
+		<!-- 系统管理员的action -->
+		<action name="m_login" class="com.wxcloud.action.AdminAction" method="adminLogin">
+			<result name="success">/manage/index.jsp</result>
+			<result name="failed">/manage/login.jsp</result>
+		</action>
+		<action name="m_queryAdmin" class="com.wxcloud.action.AdminAction" method="adminQuery">
+			<result name="success">/manage/adminmgr.jsp</result>
+		</action>
+		<action name="m_queryAdminSelf" class="com.wxcloud.action.AdminAction" method="selfQuery">
+			<result name="success">/manage/selfedit.jsp</result>
+			<result name="failed">/manage/login.jsp</result>
+		</action>
+		<action name="m_addAdmin" class="com.wxcloud.action.AdminAction" method="adminAdd">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_editAdmin" class="com.wxcloud.action.AdminAction" method="adminEdit">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_editAdminSelf" class="com.wxcloud.action.AdminAction" method="adminEditSelf">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_deleteAdmin" class="com.wxcloud.action.AdminAction" method="adminDelete">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_queryUser" class="com.wxcloud.action.UserAction" method="userQuery">
+			<result name="success">/manage/UserMgt.jsp</result>
+		</action>
+		<action name="e_queryUser" class="com.wxcloud.action.UserAction" method="usersQuery">
+			<result name="success">/manage/usermgr.jsp</result>
+		</action>
+		<action name="m_addUser" class="com.wxcloud.action.UserAction" method="userAdd">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="register" class="com.wxcloud.action.UserAction" method="userAdd">
+			<result name="success">/manage/userlogin.jsp</result>
+			<result name="failed">/manage/register.jsp</result>
+		</action>
+		<action name="m_editUser" class="com.wxcloud.action.UserAction" method="userEdit">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="e_editUser" class="com.wxcloud.action.UserAction" method="usersEdit">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_deleteUser" class="com.wxcloud.action.UserAction" method="userDelete">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		
+		<!-- 企业用户的action -->
+		<action name="e_login" class="com.wxcloud.action.UserAction" method="userLogin">
+			<result name="success">/manage/userindex.jsp</result>
+			<result name="failed">/manage/userlogin.jsp</result>
+		</action>
+		<action name="e_queryUserSelf" class="com.wxcloud.action.UserAction" method="sselfQuery">
+			<result name="success">/manage/selfedit.jsp</result>
+			<result name="failed">/manage/userlogin.jsp</result>
+		</action>
+		<action name="e_editUserSelf" class="com.wxcloud.action.UserAction" method="userEditSelf">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		
+		<!-- 房间信息的action -->
+	<action name="m_queryHouse" class="com.wxcloud.action.HouseAction" method="HouseQuery">
+			<result name="success">/manage/HouseMgt.jsp</result>
+	</action>
+	<action name="m_addHouse" class="com.wxcloud.action.HouseAction" method="HouseAdd">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_editHouse" class="com.wxcloud.action.HouseAction" method="HouseEdit">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_deleteHouse" class="com.wxcloud.action.HouseAction" method="HouseDelete">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="e_editHouseSelf" class="com.wxcloud.action.HouseAction" method="HouseEditSelf">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		
+		<!-- 维护信息的action -->
+	<action name="m_queryRepair" class="com.wxcloud.action.RepairAction" method="RepairQuery">
+			<result name="success">/manage/RepairMgt.jsp</result>
+	</action>
+	<action name="m_addRepair" class="com.wxcloud.action.RepairAction" method="RepairAdd">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_editRepair" class="com.wxcloud.action.RepairAction" method="RepairEdit">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_deleteRepair" class="com.wxcloud.action.RepairAction" method="RepairDelete">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="e_editRepairSelf" class="com.wxcloud.action.RepairAction" method="RepairEditSelf">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		
+		<!-- Cost信息的action -->
+	<action name="m_queryCost" class="com.wxcloud.action.CostAction" method="CostQuery">
+			<result name="success">/manage/CostMgt.jsp</result>
+	</action>
+	<action name="e_queryCost" class="com.wxcloud.action.CostAction" method="CostsQuery">
+			<result name="success">/manage/costmgr.jsp</result>
+	</action>
+	<action name="m_addCost" class="com.wxcloud.action.CostAction" method="CostAdd">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_editCost" class="com.wxcloud.action.CostAction" method="CostEdit">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_deleteCost" class="com.wxcloud.action.CostAction" method="CostDelete">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="e_editCostSelf" class="com.wxcloud.action.CostAction" method="CostEditSelf">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		
+		<!-- Notice信息的action -->
+	<action name="m_queryNotice" class="com.wxcloud.action.NoticeAction" method="NoticeQuery">
+			<result name="success">/manage/NoticeMgt.jsp</result>
+	</action>
+	<action name="e_queryNotice" class="com.wxcloud.action.NoticeAction" method="NoticeQuery">
+			<result name="success">/manage/noticemgr.jsp</result>
+	</action>
+	<action name="m_addNotice" class="com.wxcloud.action.NoticeAction" method="NoticeAdd">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_editNotice" class="com.wxcloud.action.NoticeAction" method="NoticeEdit">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_deleteNotice" class="com.wxcloud.action.NoticeAction" method="NoticeDelete">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="e_editNoticeSelf" class="com.wxcloud.action.NoticeAction" method="NoticeEditSelf">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		
+		<!-- Express信息的action -->
+	<action name="m_queryExpress" class="com.wxcloud.action.ExpressAction" method="ExpressQuery">
+			<result name="success">/manage/ExpressMgt.jsp</result>
+	</action>
+	<action name="e_queryExpress" class="com.wxcloud.action.ExpressAction" method="ExpressQuery">
+			<result name="success">/manage/expressmgr.jsp</result>
+	</action>
+	<action name="m_addExpress" class="com.wxcloud.action.ExpressAction" method="ExpressAdd">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_editExpress" class="com.wxcloud.action.ExpressAction" method="ExpressEdit">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_deleteExpress" class="com.wxcloud.action.ExpressAction" method="ExpressDelete">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="e_editExpressSelf" class="com.wxcloud.action.ExpressAction" method="ExpressEditSelf">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		
+		<!-- Deal信息的action -->
+	<action name="m_queryDeal" class="com.wxcloud.action.DealAction" method="DealQuery">
+			<result name="success">/manage/DealMgt.jsp</result>
+	</action>
+		<!-- Deal信息的action -->
+	<action name="e_queryDeal" class="com.wxcloud.action.DealAction" method="DealsQuery">
+			<result name="success">/manage/dealmgr.jsp</result>
+	</action>
+	<action name="m_addDeal" class="com.wxcloud.action.DealAction" method="DealAdd">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+	</action>
+	<action name="e_addDeal" class="com.wxcloud.action.DealAction" method="DealsAdd">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+	</action>
+		<action name="m_editDeal" class="com.wxcloud.action.DealAction" method="DealEdit">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="e_editDeal" class="com.wxcloud.action.DealAction" method="DealsEdit">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_deleteDeal" class="com.wxcloud.action.DealAction" method="DealDelete">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="e_editDealSelf" class="com.wxcloud.action.DealAction" method="DealEditSelf">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		
+		<!-- Complaint信息的action -->
+	<action name="m_queryComplaint" class="com.wxcloud.action.ComplaintAction" method="ComplaintQuery">
+			<result name="success">/manage/ComplaintMgt.jsp</result>
+	</action>
+	<action name="e_queryComplaint" class="com.wxcloud.action.ComplaintAction" method="ComplaintsQuery">
+			<result name="success">/manage/complaintmgr.jsp</result>
+	</action>
+	<action name="m_addComplaint" class="com.wxcloud.action.ComplaintAction" method="ComplaintAdd">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+	</action>
+	<action name="e_addComplaint" class="com.wxcloud.action.ComplaintAction" method="ComplaintsAdd">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+	</action>
+		<action name="m_editComplaint" class="com.wxcloud.action.ComplaintAction" method="ComplaintEdit">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="e_editComplaint" class="com.wxcloud.action.ComplaintAction" method="ComplaintsEdit">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="m_deleteComplaint" class="com.wxcloud.action.ComplaintAction" method="ComplaintDelete">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		<action name="e_editComplaintSelf" class="com.wxcloud.action.ComplaintAction" method="ComplaintEditSelf">
+			<result name="success">/manage/success.jsp</result>
+			<result name="failed">/manage/error.jsp</result>
+		</action>
+		
+		<action name="Power" class="com.wxcloud.action.ReportAction" method="getAllPower">
+	    </action>
+	    <action name="Complaint" class="com.wxcloud.action.ReportAction" method="getAllUser">
+	    </action>
+
+		
+	<action name="excelTempletAction" class="com.wxcloud.action.ExcelTempletAction" >	
+	</action>
+	<action name="houseMgtAction" class="com.wxcloud.action.HouseMgtAction" method="exportExcelTemplet">	
+	</action>
+		<action name="excelAction" class="com.wxcloud.action.ExcelAction" >	
+	</action>
+	<action name="houseReportMgtAction" class="com.wxcloud.action.HouseReportMgtAction" method="reportexcel">	
+	</action>
+	</package>
+</struts>

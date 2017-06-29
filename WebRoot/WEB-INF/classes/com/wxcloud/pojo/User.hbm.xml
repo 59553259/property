@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">  
+<hibernate-mapping>  
+	<class name="com.wxcloud.pojo.User" table="usermgt">
+		<id name="id" type="java.lang.Integer">
+			<column name="ID" />
+			<generator class="increment" />
+		</id>
+		<property name="User" type="java.lang.String">
+			<column name="User" length="32"></column>
+		</property>
+		<property name="Name" type="java.lang.String">
+			<column name="Name" length="32"></column>
+		</property>
+		<property name="Password" type="java.lang.String">
+			<column name="Password" length="32"></column>
+		</property>
+		<property name="Sex" type="java.lang.String">
+			<column name="Sex" length="16"></column>
+		</property>
+		<property name="IdCard" type="java.lang.String">
+			<column name="IdCard" length="32"></column>
+		</property>
+		<property name="Email" type="java.lang.String">
+			<column name="Email" length="32"></column>
+		</property>
+		<property name="Phone" type="java.lang.String">
+			<column name="Phone" length="32"></column>
+		</property>
+		<property name="Pald" type="java.lang.String">
+			<column name="Pald" length="16"></column>
+		</property>
+		<property name="Hold" type="java.lang.String">
+			<column name="Hold" length="16"></column>
+		</property>
+		<property name="state" type="java.lang.Integer">
+			<column name="STATE" />
+		</property>
+		<property name="regdate" type="java.util.Date">
+			<column name="REGDATE" length="10" />
+		</property>
+	</class>
+</hibernate-mapping>

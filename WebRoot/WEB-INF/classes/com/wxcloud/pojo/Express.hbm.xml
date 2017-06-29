@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>  
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">  
+<hibernate-mapping>  
+	<class name="com.wxcloud.pojo.Express" table="expressmgt">
+		<id name="id" type="java.lang.Integer">
+			<column name="id" />
+			<generator class="increment" />
+		</id>
+		<property name="CustomName" type="java.lang.String">
+			<column name="CustomName" length="32"></column>
+		</property>
+		<property name="CustomPhone" type="java.lang.String">
+			<column name="CustomPhone" length="32"></column>
+		</property>
+		<property name="State" type="java.lang.String">
+			<column name="State" length="16"></column>
+		</property>
+		<property name="ArriveTime" type="java.util.Date">
+			<column name="ArriveTime" length="10" />
+		</property>
+	</class>
+</hibernate-mapping>
